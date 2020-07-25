@@ -3,6 +3,7 @@
 <%@	taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@	taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,6 +16,7 @@
 	<!--	cria	o	DAO	-->
 	<jsp:useBean id="dao" class="br.com.caelum.agenda.dao.ContatoDao" />
 	<table>
+
 		<!--	percorre	contatos	montando	as	linhas	da	tabela	-->
 		<c:forEach var="contato" items="${dao.lista}" varStatus="id">
 			<tr bgcolor="#${id.count % 2 ==	0 ? 'aaee88' : 'ffffff' }">
